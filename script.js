@@ -425,7 +425,7 @@ function setupPremiumElements() {
 
         // Gera o link encurtado (baseado no domínio do seu site)
         // Substitua "https://seu-site.netlify.app" pelo seu domínio real
-        return `https://seu-site.netlify.app/redirect.html?code=${shortCode}`;
+        return `https://victormedeiros82.github.io/geradorlinkwhatsapp/redirect.html?code=${shortCode}`;
     }
 
     // Função para selecionar país ajustada para escopo local
