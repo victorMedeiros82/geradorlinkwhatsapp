@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+</head>
+<body>
+    <p>Redirecionando... Se não for redirecionado, <a id="redirectLink" href="#">clique aqui</a>.</p>
+    <script>
+        // Função para redirecionar com base no código
+        function redirect() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const links = JSON.parse(localStorage.getItem('shortenedLinks') || '{}');
+
+            if (code && links[code]) {
+                const longUrl = links[code];
+                document.getElementById('redirectLink').href = longUrl;
+                window.location.href = longUrl; // Redireciona automaticamente
+            } else {
+                document.body.innerHTML = '<p>Link inválido ou expirado.</p>';
+            }
+        }
+
+        // Executa o redirecionamento ao carregar a página
+        redirect();
+    </script>
+</body>
+</html>

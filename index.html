@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Link do WhatsApp - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-indigo-900 mb-4">Bem-vindo ao Gerador de Links</h1>
+        <p class="text-gray-600 mb-6">Faça login ou cadastre-se para acessar o sistema.</p>
+
+        <!-- Formulário de Login -->
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com" class="w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+                <input type="password" id="password" placeholder="••••••••" class="w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">Entrar</button>
+        </form>
+
+        <!-- Cadastro para Premium -->
+        <div class="mt-6 text-center">
+            <p class="text-gray-600">Não tem conta? Experimente o plano Premium!</p>
+            <button id="signupPremium" class="mt-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md">Cadastrar como Premium</button>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
+</body>
+</html>
